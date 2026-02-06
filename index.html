@@ -18,14 +18,22 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+
+      animation: slowZoom 20s ease-in-out infinite alternate;
     }
 
+    @keyframes slowZoom {
+      from { background-size: 100%; }
+      to { background-size: 110%; }
+    }
     /* Dark overlay for readability */
     body.celebrate::before {
       content: "";
       position: fixed;
       inset: 0;
-      background: rgba(0, 0, 0, 0.45);
+      background: linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.35));
       z-index: 0;
     }
 
@@ -170,3 +178,4 @@
 
 </body>
 </html>
+
